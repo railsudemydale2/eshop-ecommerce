@@ -1,10 +1,10 @@
-import { useRef } from "react";
-import Card from "../../components/card/Card";
-import styles from "./Contact.module.scss";
-import { FaPhoneAlt, FaEnvelope, FaTwitter } from "react-icons/fa";
-import { GoLocation } from "react-icons/go";
-import emailjs from "@emailjs/browser";
-import { toast } from "react-toastify";
+import { useRef } from 'react';
+import Card from '../../components/card/Card';
+import styles from './Contact.module.scss';
+import { FaPhoneAlt, FaEnvelope, FaTwitter } from 'react-icons/fa';
+import { GoLocation } from 'react-icons/go';
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 const Contact = () => {
   const form = useRef();
@@ -16,13 +16,13 @@ const Contact = () => {
     emailjs
       .sendForm(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        "template_7xyhwen",
+        'template_eolltwp',
         form.current,
-        "user_hKs2aRfLoozcqA28UpUyz"
+        'ebHh19jhJFAU667Cq'
       )
       .then(
         (result) => {
-          toast.success("Message sent successfully");
+          toast.success('Message sent successfully');
         },
         (error) => {
           toast.error(error.text);
@@ -72,7 +72,7 @@ const Contact = () => {
               <div className={styles.icons}>
                 <span>
                   <FaPhoneAlt />
-                  <p>+234 705 141 6545</p>
+                  <p>+1 6138250812</p>
                 </span>
                 <span>
                   <FaEnvelope />
@@ -80,11 +80,11 @@ const Contact = () => {
                 </span>
                 <span>
                   <GoLocation />
-                  <p>Abuja, Nigeria</p>
+                  <p>Ottawa, Canada</p>
                 </span>
                 <span>
                   <FaTwitter />
-                  <p>@ZinoTrust</p>
+                  <p>@StewdTrust</p>
                 </span>
               </div>
             </Card>
